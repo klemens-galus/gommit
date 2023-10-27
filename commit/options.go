@@ -12,7 +12,7 @@ var (
 
 
 	minCommitSize = 10
-	maxCommitSize = 255
+	maxCommitSize = -1
 	types = []string{
 		"build",
 		"chore",
