@@ -20,6 +20,7 @@ var (
 		"docs",
 		"feat",
 		"fix",
+		"hotfix",
 		"perf",
 		"refactor",
 		"revert",
