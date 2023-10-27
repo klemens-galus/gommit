@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 )
 var (
-	debugMode = false
+	debugMode = false 
 )
 
 func main() {
