@@ -11,7 +11,7 @@ func main() {
 	commitFile := os.Args[1]
 	dat, _ := ioutil.ReadFile(commitFile)
 	commit := string(dat)
-	isValid := gomit.Check_commit(commit)
+	isValid := gomit.Check_commit_size(commit)
 	if isValid {
 		os.Exit(0)
 	} else {
