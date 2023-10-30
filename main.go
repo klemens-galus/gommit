@@ -11,13 +11,20 @@ var (
 )  
 
 func main() {
-
-	commitFile := os.Args[1] //GIVE THE PATH OF THE COMMIT FILE
-	dat, _ := ioutil.ReadFile(commitFile) //READ THE COMMIT FILE
-	commit := string(dat)
-	isValid := gomit.Check_commit_size(commit) //CHECK THE SIZE OF THE COMMIT
-	isValid2 := gomit.Check_commit_lint(commit) //LINT THE COMMIT
-
+	isValid := false 
+	isValid2 := false
+	commit := ""
+	if !debugMode {
+		commitFile := os.Args[1] //GIVE THE PATH OF THE COMMIT FILE
+		dat, _ := ioutil.ReadFile(commitFile) //READ THE COMMIT FILE
+		commit = string(dat)
+	}else{
+		dat := os.Args[1]
+		commit = string(dat)
+		
+	}
+	isValid = gomit.Check_commit_size(commit) //CHECK THE SIZE OF THE COMMIT
+	isValid2 = gomit.Check_commit_lint(commit) //LINT THE COMMIT
 	if isValid && isValid2 {
 		if debugMode {
 			fmt.Println("Well executed")
