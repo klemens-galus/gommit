@@ -2,7 +2,7 @@ os=$(uname -a | grep -e Linux -e MINGW64)
 
 echo $os
 
-if [ -z "${VAR}" ]; then
+if [ -z "${os}" ]; then
     echo "OS is not available"
     exit 1
 fi
