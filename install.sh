@@ -16,7 +16,7 @@ fi
 
 if [ -z "$(uname -a | grep -e MINGW64)" ]; then
     mkdir -p .git/myhooks
-    curl https://github.com/klemens-galus/gommit/releases/download/1.0.2/gommit_windows_amd64.exe -o .git/myhooks/prepare-commit-msg
+    curl https://github.com/klemens-galus/gommit/releases/download/1.0.2/gommit_windows_amd64.exe -o .git/myhooks/prepare-commit-msg.exe
     chmod +x .git/myhooks/prepare-commit-msg
     git config --local core.hooksPath .git/myhooks
 fi 
