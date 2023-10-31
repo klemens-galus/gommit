@@ -1,8 +1,7 @@
 os=$(uname -a | grep -e Linux -e MINGW64)
 
-echo $os
-
 if [ -z "${os}" ]; then
+    echo Linux
     echo "OS is not available"
     exit 1
 fi
@@ -16,6 +15,7 @@ if [ -z "$(uname -a | grep -e Linux)" ]; then
 fi 
 
 if [ -z "$(uname -a | grep -e MINGW64)" ]; then
+    echo MINGW64
     mkdir -p .git/myhooks
     curl  -L -o ./.git/myhooks/gommit_windows_amd64.zip https://github.com/klemens-galus/gommit/releases/download/1.0.2/gommit_windows_amd64.zip
     tar -xf .git/myhooks/gommit_windows_amd64.zip -C .git/myhooks/
