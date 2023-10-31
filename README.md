@@ -1,5 +1,7 @@
 # How to install with script
 
+Go in your repos where you want to use the commit linter
+
 ## Windows
 ```bash
 curl -s https://raw.githubusercontent.com/klemens-galus/gommit/master/install_windows.sh | bash
@@ -32,7 +34,15 @@ build the go project
 
 ```bash
 go build -o bin/prepare-commit-msg
-mv in/prepare-commit-msg .git/myhooks/prepare-commit-msg
+```
+
+Go in your repos where you want to use the commit linter
+Copy the bin in the project
+Install the bin
+Configure git
+```bash
+mkdir .git/myhooks
+mv prepare-commit-msg .git/myhooks/prepare-commit-msg
 git config --local core.hooksPath .git/myhooks
 ```
 
