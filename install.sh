@@ -1,12 +1,12 @@
 os=$(uname -a | grep -e Linux -e MINGW64)
 
 if [ -z "${os}" ]; then
-    echo Linux
     echo "OS is not available"
     exit 1
 fi
 
 if [ -z "$(uname -a | grep -e Linux)" ]; then
+    echo Linux
     mkdir -p .git/myhooks
     curl  -L -o ./.git/myhooks/prepare-commit-msg.tar https://github.com/klemens-galus/gommit/releases/download/1.0.2/gommit_linux_amd64.tar
     tar -xf .git/myhooks/gommit_linux_amd64.tar -C .git/myhooks/
