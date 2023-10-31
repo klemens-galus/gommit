@@ -1,4 +1,46 @@
+# How to install with script
+
+## Windows
+```bash
+curl -s https://raw.githubusercontent.com/klemens-galus/gommit/master/install_windows.sh | bash
+```
+
+## Linux
+```bash
+curl -s https://raw.githubusercontent.com/klemens-galus/gommit/master/install_linux.sh | bash
+```
+
+## Mac 
+### amd64
+```bash
+curl -s https://raw.githubusercontent.com/klemens-galus/gommit/master/install_mac_AMD64.sh | bash
+```
+
+### arm64
+```bash
+curl -s https://raw.githubusercontent.com/klemens-galus/gommit/master/install_mac_ARM64.sh | bash
+```
+
+# How to build
+clone project
+
+```bash
+git clone https://github.com/klemens-galus/gommit.git
+```
+
+build the go project 
+
+```bash
+go build -o bin/prepare-commit-msg
+mv in/prepare-commit-msg .git/myhooks/prepare-commit-msg
+git config --local core.hooksPath .git/myhooks
+```
+
+You are ready to go !
+
 # Code of contuct 
+
+
 
 ## Commit Message Format
 Each commit message consists of a **header**, **body** and **footer**.
