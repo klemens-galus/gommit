@@ -1,4 +1,4 @@
-package gomit
+package gommit
 
 import (
 	"fmt"
