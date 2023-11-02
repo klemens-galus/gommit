@@ -29,7 +29,7 @@ var (
 	}
 )
 
-func getOption() Option {
+func GetOption() Option {
 	o := Option{
 		Type: types,
 		MinimumSize: minCommitSize,

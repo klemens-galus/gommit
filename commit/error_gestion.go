@@ -4,14 +4,14 @@ import (
 	"fmt"
 )
 
-func show_type(){
+func ShowType(){
 	fmt.Println("You can use those types :")
 	for _, commitType := range o.Type {
 		fmt.Println("	-", commitType)
 	}
 }
 
-func show_exemple(){
+func ShowExample(){
 	fmt.Println("The right commit format is :")
 	fmt.Println("	"+string(colorBlue)+"<type>"+string(colorMagenta)+"(<scope>)"+string(colorReset)+": "+string(colorCyan)+"<short summary>"+string(colorReset))
 	fmt.Println(string(colorBlue),"type : the commit type"+string(colorReset))
@@ -22,8 +22,8 @@ func show_exemple(){
 	fmt.Println(string(colorRed)+"	fix: fix				is not a good commit message"+string(colorReset))
 
 }
-func show_req(commit string) {
-	show_type()
+func ShowReq(commit string) {
+	ShowType()
 
-	show_exemple()
+	ShowExample()
 }
