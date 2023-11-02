@@ -11,10 +11,9 @@ var (
 func Check_commit_size(commit string) bool {
 	if len([]rune(commit)) > 10 {
 		return true
-	} else { 
-		fmt.Printf("Your commit message need to contain at least %d characters \n",o.MinimumSize)
-		return false
 	}
+	fmt.Printf("Your commit message need to contain at least %d characters \n",o.MinimumSize)
+	return false
 } 
 
 func Check_commit_lint(commit string) bool {
