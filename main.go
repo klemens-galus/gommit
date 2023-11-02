@@ -5,16 +5,24 @@ import (
 	"gommit.go/commit"
 	"os"
 	"io/ioutil"
+	"strconv"
 )
 var (
-	debugMode = false 
+	debugMode string
+	isDebugMode = false 
 )  
 
 func main() {
+	isDebugMode, err := strconv.ParseBool(debugMode)
+    if err != nil {
+        fmt.Println("Error parsing debugMode:", err)
+        return
+    }
+
 	isValid := false 
 	isValid2 := false
 	commit := ""
-	if !debugMode {
+	if !isDebugMode {
 		commitFile := os.Args[1] //GIVE THE PATH OF THE COMMIT FILE
 		dat, _ := ioutil.ReadFile(commitFile) //READ THE COMMIT FILE
 		commit = string(dat)
@@ -26,7 +34,7 @@ func main() {
 	isValid = gomit.CheckCommitSize(commit) //CHECK THE SIZE OF THE COMMIT
 	isValid2 = gomit.CheckCommitLint(commit) //LINT THE COMMIT
 	if isValid && isValid2 {
-		if debugMode {
+		if isDebugMode {
 			fmt.Println("Well executed")
 			os.Exit(1)
 		}else {
