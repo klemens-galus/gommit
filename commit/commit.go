@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	o = getOption()
+	o = GetOption()
 )
 func CheckCommitSize(commit string) bool {
 	if len([]rune(commit)) > 10 {
