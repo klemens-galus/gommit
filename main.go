@@ -23,8 +23,8 @@ func main() {
 		commit = string(dat)
 		
 	}
-	isValid = gomit.Check_commit_size(commit) //CHECK THE SIZE OF THE COMMIT
-	isValid2 = gomit.Check_commit_lint(commit) //LINT THE COMMIT
+	isValid = gomit.CheckCommitSize(commit) //CHECK THE SIZE OF THE COMMIT
+	isValid2 = gomit.CheckCommitLint(commit) //LINT THE COMMIT
 	if isValid && isValid2 {
 		if debugMode {
 			fmt.Println("Well executed")

@@ -8,7 +8,7 @@ import (
 var (
 	o = getOption()
 )
-func Check_commit_size(commit string) bool {
+func CheckCommitSize(commit string) bool {
 	if len([]rune(commit)) > 10 {
 		return true
 	}
@@ -16,15 +16,15 @@ func Check_commit_size(commit string) bool {
 	return false
 } 
 
-func Check_commit_lint(commit string) bool {
+func CheckCommitLint(commit string) bool {
 	for _, prefix := range o.Type {
 		match, err := regexp.MatchString("^"+prefix+"(: |\\(.*\\): |!: )", commit)
 		if match && err == nil {
 			return true
 		}
 	}
-	fmt.Println(string(colorRed)+"Your commit message doenst correspond to requirements"+string(colorReset))
-	show_req(commit)
+	fmt.Println(string(colorRed)+"Your commit message doesn't correspond to requirements"+string(colorReset))
+	ShowReq(commit)
 	return false
 } 
 
