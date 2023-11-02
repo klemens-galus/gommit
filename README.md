@@ -48,9 +48,7 @@ git config --local core.hooksPath .git/myhooks
 
 You are ready to go !
 
-# Code of contuct 
-
-
+# Code of conduct 
 
 ## Commit Message Format
 Each commit message consists of a **header**, **body** and **footer**.
@@ -61,9 +59,9 @@ Each commit message consists of a **header**, **body** and **footer**.
 <BLANK LINE>
 <footer>
 ```
-`header` need to be conform (look section : [here](#commit-message-header))
+`header` must conform to a certain format (look section: [here](#commit-message-header))
 
-`body` give a short summary of the code changes (optional)
+`body` gives a short summary of the code changes (optional)
 
 `footer` (optional)
 
@@ -72,7 +70,7 @@ Each commit message consists of a **header**, **body** and **footer**.
 feat: now front show date and time
 
 Users can now see date and time at the 
-botom left of the website
+bottom left of the website
 
 Refs: #125
 ```
@@ -84,14 +82,14 @@ Refs: #125
    │       │             └─➤ A short summary of the code changes
    │       │                    Not capital letters, No period at the end
    │       │
-   │       └─➤ Commit Scope: give more contect to your commit (optional)
+   │       └─➤ Commit Scope: gives more context to your commit (optional)
    │
    │
    └─➤ Commit Type: build|chore|ci|docs|feat|fix|hotfix|perf|refactor|revert|style|test
 ```
 
  - **build**: change related to building the project
- - **chore**:
+ - **chore**
  - **ci**: change related to the continuous integration/continuous delivery (CI/CD) infrastructure
  - **docs**: change related to the project's documentation
  - **feat**: new feature
@@ -103,29 +101,27 @@ Refs: #125
  - **style**: code style change, such as formatting or changing naming conventions
  - **test**: adding or modifying unit tests
 
- #### Summary
- - Use the imerative: "add" not "added"
- - Do not captialize the first letter
+ ### Summary
+ - Use the imperative: "add" not "added"
+ - Do not capitalize the first letter
  - Do not use period at the end  
 
 
 
 ---
-Few exemples of good and bad commit:
+Few examples of good and bad commits:
 ```
 fix: change payload of login route #OK
 fix(loginCheck): change payload of login route #OK
-FIX: change payload of login route #NOK fix need to be in lowercase
+FIX: change payload of login route #NOK, "fix" needs to be in lowercase
 fix #NOK
 change payload of login route #NOK
 ```
 
 
 
-
 ---
 
- ### Sources
-
- Angular contributing https://github.com/angular/angular/blob/main/CONTRIBUTING.md  
- Contentional commits https://www.conventionalcommits.org/en/v1.0.0/
+# Sources
+- Contributing to Angular https://github.com/angular/angular/blob/main/CONTRIBUTING.md  
+- Conventional commits https://www.conventionalcommits.org/en/v1.0.0/
